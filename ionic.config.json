@@ -1,5 +1,7 @@
 {
   "name": "WatchMe",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

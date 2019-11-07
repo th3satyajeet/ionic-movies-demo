@@ -10,6 +10,9 @@
     color: white;
     height: 80px;
 }
+.watch-align {
+    text-align: right;
+}
 ion-row {
     padding-top: 20px;
 }
@@ -17,9 +20,10 @@ ion-row {
     padding-top: 0px;
     // background-color: rgb(32, 72, 88);
     background-image: linear-gradient(rgb(32, 72, 88), black);
-    height: 150%;
+    height: 250%;
     align-content: center;
 }
+
 ion-card {
     padding-top: 20px;
 }
@@ -31,6 +35,25 @@ ion-card {
     text-align: center;
     padding: 0%;
     padding-top: 40px;
+}
+.img-prop {
+    height: 450px;
+    
+}
+.text-prop {
+    padding-left: 0px;
+    font-size: 30px;
+}
+.text-prop-inside {
+    font-size: 15px;
+    text-align: center;
+}
+.logos-border {
+    padding-left: 0px;
+    border-style: ridge;
+    border-color: white;
+    width: 500px;
+    height: 160px;
 }
 .image-size {
     height: 275px;

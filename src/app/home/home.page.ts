@@ -20,7 +20,7 @@ export class HomePage implements OnInit {
   data: any;
 
   ngOnInit() {
-
+    this.dataservice.getData().subscribe(result => this.data = result);
   }
 
 

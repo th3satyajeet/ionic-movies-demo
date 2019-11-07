@@ -33,50 +33,72 @@
   
   <div class="content">
     <ion-row>
-        <ion-col class="category">
-        <ion-card class="card">
-            <div [routerLink]="['/subcategory']" class="image image-size">
-              <img src="https://image.tmdb.org/t/p/original/iVoZqwvGAwxvGVbYV5y04wpiBob.jpg"  /> 
-              <!-- <ion-text [routerLink]="['/subcat']" routerLinkActive="router-link-active" >NEW RELEASES</ion-text> -->
-            </div>
-        </ion-card>
-        <div>
-            NEW RELEASES
-        </div>
-      </ion-col>
-      <ion-col class="category">
-        <ion-card class="card"> 
-            <div [routerLink]="['/subcategory']" class="image image-size">
-              <img src="https://cdn11.bigcommerce.com/s-ujc2jertho/images/stencil/1280x1280/products/12583/11239/Avengers_Endgame__06921.1562707768.jpg?c=2&imbypass=on" (click)="mostPopular()"  /> 
-            </div>
-        </ion-card>
-        <div>
-            MOST POPULAR
-        </div>
-      </ion-col>
-
-      <ion-col class="category">
-        <ion-card class="card">
-            <div [routerLink]="['/subcategory']" class="image image-size" >
-              <img src="https://cdn3.movieweb.com/i/movie/HpFU6MXNB3UhU3t3uG8IGkOpdSmeRZ/384:50/The-Terminator.jpg" (click)="action()" /> 
-      
-            </div>
-        </ion-card>
-        <div>
-            ACTION MOVIES
-        </div>
-      </ion-col>
-      <ion-col class="category">
-        <ion-card class="card">
-            <div [routerLink]="['/subcategory']" class="image image-size">
-                <img src="https://stat2.bollywoodhungama.in/wp-content/uploads/2016/03/432977985.jpg" (click)="comedy()"/> 
-                
+        <div class="category">
+          <ion-card class="card">
+              <div [routerLink]="['/1']" class="image image-size">
+                <img src="https://image.tmdb.org/t/p/original/iVoZqwvGAwxvGVbYV5y04wpiBob.jpg"  /> 
+                <!-- <ion-text [routerLink]="['/subcat']" routerLinkActive="router-link-active" >NEW RELEASES</ion-text> -->
               </div>
-        </ion-card>
-        <div>
-            COMEDY MOVIES
+          </ion-card>
+          <div>
+              NEW RELEASES
+          </div>
         </div>
-      </ion-col>
+        <div class="category">
+          <ion-card class="card"> 
+              <div [routerLink]="['/2']" class="image image-size">
+                <img src="https://cdn11.bigcommerce.com/s-ujc2jertho/images/stencil/1280x1280/products/12583/11239/Avengers_Endgame__06921.1562707768.jpg?c=2&imbypass=on"/> 
+              </div>
+          </ion-card>
+          <div>
+              MOST POPULAR
+          </div>
+        </div>
+  
+        <div class="category">
+          <ion-card class="card">
+              <div [routerLink]="['/3']" class="image image-size" >
+                <img src="https://cdn3.movieweb.com/i/movie/HpFU6MXNB3UhU3t3uG8IGkOpdSmeRZ/384:50/The-Terminator.jpg"/> 
+        
+              </div>
+          </ion-card>
+          <div>
+              ACTION MOVIES
+          </div>
+        </div>
+        <div class="category">
+          <ion-card class="card">
+              <div [routerLink]="['/4']" class="image image-size">
+                  <img src="https://stat2.bollywoodhungama.in/wp-content/uploads/2016/03/432977985.jpg"/> 
+                  
+                </div>
+          </ion-card>
+          <div>
+              COMEDY MOVIES
+          </div>
+        </div>
+        <div class="category">
+          <ion-card class="card">
+              <div [routerLink]="['/5']" class="image image-size">
+                  <img src="https://i.ebayimg.com/images/g/Xc8AAOSw-3FZF1CJ/s-l300.jpg"/> 
+                  
+                </div>
+          </ion-card>
+          <div>
+              HORROR MOVIES
+          </div>
+        </div>
+        <div class="category">
+          <ion-card class="card">
+              <div [routerLink]="['/6']" class="image image-size">
+                  <img src="https://i.ebayimg.com/images/g/SRQAAOSwbVdbmoOx/s-l300.jpg"/> 
+                  
+                </div>
+          </ion-card>
+          <div>
+              ANIMATION MOVIES
+          </div>
+        </div>
     </ion-row>
     
   </div>
