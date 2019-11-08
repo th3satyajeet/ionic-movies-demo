@@ -17,12 +17,9 @@ export class HomePage implements OnInit {
   }
 
   date = new Date();
-  data: any;
+  public data: any;
 
   ngOnInit() {
     this.dataservice.getData().subscribe(result => this.data = result);
   }
-
-
-
 }

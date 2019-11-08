@@ -1,0 +1,50 @@
+<div class="home-page">
+    <div class="navbar">
+      <ion-header>
+        <ion-row>
+            <ion-col size="12" size-xs>
+              <div>
+                  <ion-icon name="ios-arrow-back" color="light"></ion-icon>
+              </div>
+            </ion-col>
+          
+            <ion-col size="12" size-xs class="watch-align">
+              <div>
+                <ion-datetime displayFormat="HH:mm" min="1997" max="2019" value="{{ date }}"></ion-datetime>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-header>
+    </div>
+    
+    <div class="category content content-align"> 
+      <div *ngFor="let item of data">
+        <div *ngIf="item && item.title == title">
+          <div>
+              <ion-row>
+                  {{ item.title }}
+                </ion-row>
+                <ion-row>{{ item.year }} | PG-13 | {{item.duration}} Minutes</ion-row>
+                <ion-row></ion-row>
+                <ion-row>Audio: {{ item.audio }}</ion-row>
+                <ion-row>CC: {{ item.cc }}</ion-row>
+                <ion-row></ion-row>
+                <ion-row>Description: {{ item.description }}</ion-row>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class = "footer">
+      <ion-text>Refer to GCB page</ion-text>
+  </div>
+  
+  
+  <!-- <ion-tab-bar slot="top"> -->
+    
+  <!-- </ion-tab-bar> -->
+  
+  
+  
+  
+  

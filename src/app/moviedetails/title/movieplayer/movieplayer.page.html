@@ -1,0 +1,33 @@
+<div class="home-page">
+    <div class="navbar">
+      <ion-header>
+        <ion-row>
+            <ion-col size="12" size-xs>
+              <div>
+                  <ion-icon name="ios-arrow-back" color="light"></ion-icon>
+              </div>
+            </ion-col>
+          
+            <ion-col size="12" size-xs class="watch-align">
+              <div>
+                <ion-datetime displayFormat="HH:mm" min="1997" max="2019" value="{{ date }}"></ion-datetime>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-header>
+    </div>
+    
+    <div class="content category">
+      <ion-content>
+        <p>Video Player</p>
+        <button ion-button full (click)="startVideo()">Start Video</button>
+        <button ion-button full (click)="startAudio()">Start Audio</button>
+        <button ion-button full (click)="stopAudio()" color="danger">Stop Audio</button>
+      </ion-content>
+      
+    </div>
+</div>
+<div class = "footer">
+    <ion-text>Refer to GCB page</ion-text>
+</div>
+  

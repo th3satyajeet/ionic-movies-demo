@@ -6,12 +6,13 @@ import {Moviedata} from './movie';
 providedIn: 'root'
 })
 export class MoviedataService {
+    fav: any = [];
 
 
-constructor(public http: HttpClient ) {}
-getData(): Observable<Moviedata[]> {
-const url = 'assets/data/data.json';
-return this.http.get<Moviedata[]>(url);
-}
+    constructor(public http: HttpClient ) {}
+    getData(): Observable<Moviedata[]> {
+        const url = 'assets/data/data.json';
+        return this.http.get<Moviedata[]>(url);
+    }
 
 }

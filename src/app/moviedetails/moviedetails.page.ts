@@ -15,6 +15,8 @@ export class MoviedetailsPage implements OnInit {
   public data = [];
   constructor(public http: HttpClient, public dataservice: MoviedataService , public actrouter: ActivatedRoute ) { }
   title: any;
+  count = 0;
+  favicon: any = 'ios-star-outline';
 
 
   ngOnInit() {
@@ -23,7 +25,24 @@ export class MoviedetailsPage implements OnInit {
       // tslint:disable-next-line: no-string-literal
       this.title = params['title'];
       console.log(this.title);
-  });
+    });
   }
 
+  FavChange() {
+    this.count++;
+    // console.log(this.count);
+    if (this.count % 2 !== 0) {
+      this.dataservice.fav.push(this.title);
+      console.log(this.dataservice.fav);
+      return  this.favicon = 'ios-star';
+    } else {
+      let index: number;
+      index = this.dataservice.fav.indexOf(this.title);
+      if (index !== -1) {
+        this.dataservice.fav.splice(index, 1);
+        console.log(this.dataservice.fav);
+      }
+      return  this.favicon = 'ios-star-outline';
+    }
+  }
 }

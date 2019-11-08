@@ -35,105 +35,33 @@
     <ion-content>
       <ion-row class="dropdown">
         <ion-col>
-          <ion-item >
-            <ion-select interface="popover" placeholder="Select One" mode="ios" class="md">
-              <div class="md">
-                <ion-select-option value="nes">New Releses</ion-select-option>
-                <ion-select-option value="n64">Most Popular</ion-select-option>
-                <ion-select-option value="ps">Action</ion-select-option>
-                <ion-select-option value="genesis">Comedy</ion-select-option>
-                <ion-select-option value="saturn">Horrer</ion-select-option>
-                <ion-select-option value="snes">Animation</ion-select-option>
-              </div>
-            </ion-select>
-            <ion-icon name="ios-arrow-down" class="select" ></ion-icon> 
-          </ion-item>
+          <div class="dropdown">
+            <button class="dropbtn">{{common}}<ion-icon name="ios-arrow-down"  class="select" ></ion-icon></button>
+            <div class="dropdown-content">
+              <a [routerLink]="['/1','New Releases']" routerLinkActive="router-link-active" >New Releses</a>
+              <a [routerLink]="['/2','Most Popular']" routerLinkActive="router-link-active" >Most Popular</a>
+              <a [routerLink]="['/3','Action']" routerLinkActive="router-link-active" >Action</a>
+              <a [routerLink]="['/4','Comedy']" routerLinkActive="router-link-active" >Comedy</a>
+              <a [routerLink]="['/5','Horror']" routerLinkActive="router-link-active" >Horror</a>
+              <a [routerLink]="['/7','Science Fiction']" routerLinkActive="router-link-active" >Science Fiction</a>
+              <a [routerLink]="['/6','Animation']" routerLinkActive="router-link-active" >Animation</a>
+            </div>
+          </div>
         </ion-col>
       </ion-row>
 
       <ion-row>
         <ion-col class="category" *ngFor="let item of data">
           
-          <!-- <div *ngIf="item.year == year && id == 1||item.rating > 4 && id == 2 || item.category == category">
-            <ion-card class="card" > 
-                <div [routerLink]="['/item.title']" routerLinkActive="router-link-active"  class="image image-size">
-                    <img src={{item.img}}/>
-                    <!-- <p>{{ item.year }}</p> -->
-                <!-- </div> -->
-            <!-- </ion-card> -->
-            <!-- <div> -->
-                <!-- {{ item.title }} -->
-            <!-- </div> -->
-          <!-- </div> -->
-          <div *ngIf="item && item.year == 2019 && id == 1">
-            <ion-card class="card" > 
-                <div [routerLink]="[item.title]" class="image image-size">
+          <div *ngIf="item.year == years && id == 1 || item.rating > 4 && id == 2 || item.category == category">
+            <ion-card class="card" [routerLink]="['/moviedetails', item.title]" routerLinkActive="router-link-active"> 
+                <div class="image image-size">
                     <img src={{item.img}}/>
                     <p>{{ item.rating }}</p>
                 </div>
             </ion-card>
             <div>
                 {{ item.title }}
-            </div>
-          </div>
-
-          <div *ngIf="item && item.rating > 4 && id == 2">
-            <ion-card class="card" > 
-                <div [routerLink]="[item.title]" class="image image-size">
-                    <img src={{item.img}}/>
-                    <p>{{ item.rating }}</p>
-                </div>
-            </ion-card>
-            <div>
-                {{ item.title }}
-            </div>
-          </div>
-
-          <div *ngIf="item && item.category == 'action' && id == 3">
-            <ion-card class="card" > 
-                <div [routerLink]="[item.title]" class="image image-size">
-                  <img src={{item.img}}/>
-                  <p>{{ item.category }}</p>
-                </div>
-            </ion-card>
-            <div>
-              {{ item.title }}
-            </div>
-          </div>
-
-          <div *ngIf="item && item.category == 'comedy' && id == 4">
-            <ion-card class="card" > 
-                <div [routerLink]="[item.title]" class="image image-size">
-                  <img src={{item.img}}/>
-                  <p>{{ item.category }}</p>
-                </div>
-            </ion-card>
-            <div>
-              {{ item.title }}
-            </div>
-          </div>
-
-          <div *ngIf="item && item.category == 'horror' && id == 5">
-            <ion-card class="card" > 
-                <div [routerLink]="[item.title]" class="image image-size">
-                  <img src={{item.img}}/>
-                  <p>{{ item.category }}</p>
-                </div>
-            </ion-card>
-            <div>
-              {{ item.title }}
-            </div>
-          </div>
-
-          <div *ngIf="item && item.category == 'animation' && id == 6">
-            <ion-card class="card" > 
-                <div [routerLink]="[item.title]" class="image image-size">
-                  <img src={{item.img}}/>
-                  <p>{{ item.category }}</p>
-                </div>
-            </ion-card>
-            <div>
-              {{ item.title }}
             </div>
           </div>
         </ion-col>
