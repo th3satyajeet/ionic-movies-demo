@@ -19,10 +19,21 @@
     
     <div class="content category">
       <ion-content>
-        <p>Video Player</p>
-        <button ion-button full (click)="startVideo()">Start Video</button>
+        
+        <div *ngFor="let item of data">
+          <div *ngIf="item && item.title == title">
+            <p class="title-height">{{title}}</p>
+            <!-- <video src="http://techslides.com/demos/sample-videos/small.mp4"></video> -->
+            <video width="800" controls>
+              <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+              <source src="mov_bbb.ogg" type="video/ogg">
+              Your browser does not support video.
+            </video>
+          </div>  
+        </div>
+        <!-- <button ion-button full (click)="startVideo()">Start Video</button>
         <button ion-button full (click)="startAudio()">Start Audio</button>
-        <button ion-button full (click)="stopAudio()" color="danger">Stop Audio</button>
+        <button ion-button full (click)="stopAudio()" color="danger">Stop Audio</button> -->
       </ion-content>
       
     </div>

@@ -20,10 +20,12 @@ ion-row {
     padding-top: 0px;
     // background-color: rgb(32, 72, 88);
     background-image: linear-gradient(rgb(32, 72, 88), black);
-    height: 250%;
+    height: 550%;
     align-content: center;
 }
-
+.title-height {
+    font-size: 30px;
+}
 ion-card {
     padding-top: 20px;
 }
