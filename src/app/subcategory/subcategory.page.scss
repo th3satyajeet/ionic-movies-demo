@@ -4,14 +4,25 @@
     padding: 0%;
 }
 .navbar {
-    background-image: linear-gradient(rgb(32, 72, 88), black);
-    font-size: 28px;
-    font-weight: bold;
-    color: white;
-    height: 80px;
+  // background-image: linear-gradient(rgb(32, 72, 88), black);
+  background-color: black;
+  font-size: 28px;
+  font-weight: bold;
+  color: rgb(0, 204, 255);
+  height: 110px;
+}
+.logo {
+  padding-top: 0px;
+  height: 90px;
+  width: 350px;
 }
 ion-row {
-    padding-top: 20px;
+  padding-top: 10px;
+}
+.top-space {
+  padding-top: 25px;
+  padding-left: 60px;
+  color: rgb(0, 204, 255);
 }
 .content {
     padding-top: 0px;
